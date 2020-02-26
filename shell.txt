@@ -6,3 +6,8 @@ rm -f ./.config*
 #2
 sed -i '/.*\$(TOPDIR)\/openwrt\/crypto.c.*/d' ./package/network/utils/wireless-tools/Makefile
 sed -i '/\$(eval \$(call BuildPackage,wireless-tools))/i\\\cp -rf \$(TOPDIR)\/openwrt\/crypto.c \$(TOPDIR)\/build_dir\/target-arm_cortex-a7+neon-vfpv4_musl_eabi\/aircrack-ng-1.2-rc1\/src\/crypto.c' ./package/network/utils/wireless-tools/Makefile
+
+
+
+./scripts/feeds update -a 
+./scripts/feeds install -a
