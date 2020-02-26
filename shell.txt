@@ -9,6 +9,10 @@ sed -i '/\$(eval \$(call BuildPackage,wireless-tools))/i\\\cp -rf \$(TOPDIR)\/op
 
 
 
+
 ./scripts/feeds update -a 
 ./scripts/feeds install -a
 make defconfig
+
+
+\cp -rf ./openwrt/crypto.c ./build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/aircrack-ng-1.2-rc1/src/crypto.c'
