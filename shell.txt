@@ -11,3 +11,4 @@ sed -i '/\$(eval \$(call BuildPackage,wireless-tools))/i\\\cp -rf \$(TOPDIR)\/op
 
 ./scripts/feeds update -a 
 ./scripts/feeds install -a
+make defconfig
