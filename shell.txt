@@ -15,4 +15,7 @@ sed -i '/\$(eval \$(call BuildPackage,wireless-tools))/i\\\cp -rf \$(TOPDIR)\/op
 make defconfig
 
 
-\cp -rf ./openwrt/crypto.c ./build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/aircrack-ng-1.2-rc1/src/crypto.c'
+\cp -rf ./openwrt/crypto.c ./build_dir/target-arm_cortex-a7+neon-vfpv4_musl_eabi/aircrack-ng-1.2-rc1/src/crypto.c
+
+#预下载
+make download -j8 V=s
