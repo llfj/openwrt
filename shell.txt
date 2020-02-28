@@ -1,8 +1,8 @@
-#1
+﻿#1
 rm -rf ./openwrt
 git clone https://github.com/llfj/openwrt
 rm -f ./.config*
-\cp -rf ./openwrt/cg.txt ./.config
+\cp -rf ./openwrt/cgipqxx.txt ./.config
 #2
 sed -i '/.*\$(TOPDIR)\/openwrt\/crypto.c.*/d' ./package/network/utils/wireless-tools/Makefile
 sed -i '/\$(eval \$(call BuildPackage,wireless-tools))/i\\\cp -rf \$(TOPDIR)\/openwrt\/crypto.c \$(TOPDIR)\/build_dir\/target-arm_cortex-a7+neon-vfpv4_musl_eabi\/aircrack-ng-1.2-rc1\/src\/crypto.c' ./package/network/utils/wireless-tools/Makefile
